@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+
+	&:focus {
+		outline: none;
+	}
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+.body-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+	background-image: url(../../../public/img/main_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+  font-size: 0.85333333vw;
+}
+.container {
+  position: relative;
+  width: em(1485);
+  margin: 0 auto;
+}
+.collage_container {
+  position: relative;
+  width: em(1585);
+  margin: 0 auto;
+}
+
+html{
+  height: 100%;
+}
+@media (max-width: 523px) {
+  .body-wrap{
+    background-size: 188%;
+  }
+}

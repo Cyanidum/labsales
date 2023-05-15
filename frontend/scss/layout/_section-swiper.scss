@@ -1,0 +1,111 @@
+$light-blue: #31BEF4;
+$dark-blue:#212D55;
+
+
+
+.main-swiper{
+	position: relative;
+	width: 100%;
+	margin-top: em(50);
+	margin-left: auto;
+	margin-right: auto;
+	// font-size: 1rem;
+	padding-right: em(270);
+	padding-left: em(270);
+
+	&__swiper-slide-container{
+		position: relative;
+		margin-top: em(20);
+		border-radius: em(10);
+		padding: em(17.43);
+		background-color: #F9FCFD;
+		box-shadow: em(0) em(5) em(15) rgba(33, 45, 85, 0.1);
+		z-index: 1;
+		// width: em(300);
+		// height: em(170);
+		&:before{
+			position: absolute;
+			content: '';
+			width: em(15);
+			height: em(15);
+			background-color: white;
+			border-radius: 50%;
+			filter: drop-shadow(em(0) em(0) em(7) rgba(39, 40, 41, 0.1));
+			left: em(12);
+			top: 50%;
+			transform: translateY(-50%);
+			transition: .2s ease-in-out;
+			z-index: 3;
+		}
+		&:after{
+			position: absolute;
+			content: '';
+			width: em(25);
+			height: em(25);
+			background-color: #F9FCFD;
+			border-radius: 50%;
+			left: em(7);
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+		}
+		&:hover:before{
+			background-color: $light-blue;
+		}
+	}
+	&__card{
+		min-width: em(241);
+	}
+	&__card_body{
+		border-radius: em(10);
+		padding: em(28);
+		background-color: white;
+		box-shadow: em(0) em(5) em(15) rgba(33, 45, 85, 0.1);
+	}
+	&__card_content{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__card_title{
+		font-family: 'Gilroy';
+		margin-top: em(2.2);
+		font-weight: 600;
+		font-size: em(29);
+		color: $dark-blue;
+		letter-spacing: em(-0.35);
+	}
+	&__card_subtitle{
+		font-family: 'Gilroy-Bold';
+		font-size: em(28);
+		color: $dark-blue;
+		margin-top: em(9);
+	}
+}
+@media (max-width: 523px) {
+	.main-swiper{
+		margin-top: em(120);
+	}
+	.main-swiper__card_title{
+		font-size: em(120);
+		font-family: 'Gilroy';
+		font-weight: normal;
+	}
+	.main-swiper__card_subtitle{
+		font-size: em(69);
+	}
+	.main-swiper__card_body{
+		padding: em(58);
+	}
+	.main-swiper__swiper-slide-container{
+		padding: em(40);
+		&:before{
+			width: em(45);
+			height: em(45);
+		}
+		&:after{
+			width: em(95);
+			height: em(95);
+		}
+	}
+}

@@ -1,0 +1,239 @@
+$light-blue: #31BEF4;
+$dark-blue:#212D55;
+
+.description{
+	margin-top: em(117);
+	padding-left: em(100);
+	padding-bottom: em(100);
+	&__body{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	&__title{
+		font-family: 'Gilroy-Bold';
+		font-size: em(57);
+		color: $dark-blue;
+		letter-spacing: em(0.21);
+	}
+	&__subtitle{
+		margin-top: em(24);
+		font-family: 'Gilroy';
+		font-size: em(28);
+		color: #656D89;
+		letter-spacing: em(-0.1);
+		img{
+			display: inline;
+			width: em(20);
+			height: em(10);
+		}
+	}
+	&__cards{
+		position: relative;
+		margin-top: em(71);
+		display: flex;
+		flex-direction: row;
+		text-align: left;
+		column-gap: em(38);
+	}
+	&__card{
+		background-color: #F9FCFD;
+		padding: em(18) em(21);
+		border-radius: em(10);
+		box-shadow: 0 em(5) em(15) rgba(33, 45, 85, 0.2);
+		min-width: em(269);
+		cursor: pointer;
+		&:hover .description__card_body{
+			border: em(1) solid $light-blue;
+			&:before{
+				border-top: em(1) solid $light-blue;
+			}
+			span{
+				color: $light-blue;
+			}
+		}
+	}
+	&__card_body{
+		position: relative;
+		background-color: white;
+		min-width: em(209);
+		border-radius: em(10);
+		box-shadow: 0 em(5) em(15) rgba(33, 45, 85, 0.1);
+		padding: em(33) em(21);
+		border: em(1) solid transparent;
+		transition: .2s ease-in-out;
+		&:before{
+			position: absolute;
+			content: '';
+			transform: rotate(90deg);
+			left: em(-18);
+			height: em(30);
+			width: em(30);
+			border-radius: em(150) em(150) 0 0;
+			background-color: #F9FCFD;
+			border-top: em(1) solid transparent;
+			transition: .2s ease-in-out;
+		}
+		span{
+			font-family: 'Gilroy-Bold';
+			font-size: em(29);
+			color: $dark-blue;
+			letter-spacing: em(0.21);
+			transition: .2s ease-in-out;
+		}
+	}
+	.anchor_active{
+		.description__card_body{
+			border: em(1) solid $light-blue;
+			&:before{
+				border-top: em(1) solid $light-blue;
+			}
+			span{
+				color: $light-blue;
+			}
+		}
+	}
+	.swiper_text_block{
+		position: absolute;
+		top: 23%;
+		left: em(30);
+		width: 47%;
+		font-size: em(22);
+		z-index: 10;
+		padding: em(25) em(20) em(75) em(17);
+		border-radius: em(10);
+		background: rgba(255, 255, 255, 0.85);
+		span{
+			font-family: 'Gilroy';
+			font-size: em(15);
+			line-height: 1.2;
+		}
+	}
+	.swiper_text_title{
+		font-family: 'Gilroy-Bold';
+		font-size: em(22);
+	}
+	.swiper_text_subtitle{
+		margin-top: em(40);
+		font-family: 'Gilroy';
+		font-size: em(15);
+		line-height: 1.2;
+	}
+	.swiper-content{
+		position: relative;
+		margin-top: em(45);
+		display: flex;
+		flex-direction: row;
+		column-gap: em(50);
+	}
+	.swiper-pagination{
+		position: relative;
+	}
+	.mySwiper2{
+		width: em(1350);
+		height: em(720);
+	}
+	.mySwiper{
+		width: em(400);
+		height: em(800);
+	}
+	
+	.collage{
+		overflow: hidden;
+	}
+	.side_collage{
+		overflow: hidden;
+	}
+	.side-img{
+		width: em(300);
+		height: em(230);
+		margin-bottom: em(16);
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.main-img{
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.description{
+		.swiper_text_title{
+			font-size: em(30);
+		}
+		.swiper_text_subtitle{
+			font-size: em(20);
+		}
+		span#fourth-subtitle-2{
+			font-size: em(20);
+		}
+		.swiper_text_block{
+			width: 60%;
+			top: 47%;
+			height: em(329);
+			overflow: scroll;
+		}
+	}
+}
+@media (max-width: 523px){
+	.description{
+		padding-left: 0;
+	}
+	.description__title{
+		margin-top: em(20);
+		font-size: em(100);
+	}
+	.description__subtitle{
+		margin-top: em(15);
+		font-size: em(70);
+	}
+	.description__cards{
+		flex-direction: column;
+		row-gap: em(90);
+	}
+	.description__card_body{
+		font-size: em(40);
+		text-align: center;
+	}
+	.description__card{
+		padding: em(38) em(21);
+	}
+	.side-img{
+		margin-top: em(50);
+		margin-left: em(70);
+		width: em(790) !important;
+		height: em(470) !important;
+	}
+	.swiper-content{
+		flex-direction: column !important;
+	}
+	.mySwiper2{
+		width: 100% !important;
+		height: em(1600) !important;
+	}
+	.mySwiper{
+		width: 100% !important;
+		height: em(550) !important;
+	}
+	.swiper_text_block{
+		top: 29% !important;
+		width: 95% !important;
+		height: em(600) !important;
+	}
+	.swiper_text_title{
+		font-size: em(50) !important;
+	}
+	.swiper_text_subtitle{
+		font-size: em(50) !important;
+	}
+	#fourth-subtitle-2{
+		font-size: em(50) !important;
+	}
+}
